@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+# This app is so simple I'm not worried about the _correct_ design here.  But
+# this file does all the work and creates all the variables we use below.
+
+require_once('../controller.php');  
+?>
+
 <head>
 
     <meta charset="utf-8">
@@ -46,7 +53,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Total QSOs</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $count ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-globe fa-2x text-gray-300"></i>
@@ -63,7 +70,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Most Recent</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">25 min ago</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $time_ago ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-clock fa-2x text-gray-300"></i>
@@ -80,7 +87,24 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Most Recent Callsign</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">12345</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $most_recent_call ?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Most Recent Worked</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $most_recent_worked ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
