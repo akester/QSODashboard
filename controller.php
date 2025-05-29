@@ -15,5 +15,31 @@ $out['most_recent_call'] = '12345';
 $out['time_ago'] = '25 minutes ago';
 $out['most_recent_worked'] = '7890';
 
+$contacts = [
+    [
+        'id' => 3,
+        'callsign' => '12345',
+        'de' => '12345',
+        'exchange' => '2D',
+        'time' => new DateTime(),
+    ],
+    [
+        'id' => 2,
+        'callsign' => '12345',
+        'de' => '12345',
+        'exchange' => '2D',
+        'time' => new DateTime(),
+    ],
+    [
+        'id' => 1,
+        'callsign' => '12345',
+        'de' => '12345',
+        'exchange' => '2D',
+        'time' => new DateTime(),
+    ],
+];
+
+$out['log'] = $contacts;
+
 # These are the variables we set on the page
 extract($out);

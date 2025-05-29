@@ -129,7 +129,28 @@ require_once('../controller.php');
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body" style="height: 100vh;">
-                                    
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Number</th>
+                                                <th scope="col">Callsign</th>
+                                                <th scope="col">De</th>
+                                                <th scope="col">Time</th>
+                                                <th scope="col">Exchange</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach($log as $row) { ?>
+                                                <tr>
+                                                    <td><?= $row['id'] ?></td>
+                                                    <td><?= $row['callsign'] ?></td>
+                                                    <td><?= $row['de'] ?></td>
+                                                    <td><?= date_format($row['time'], 'c') ?></td>
+                                                    <td><?= $row['exchange'] ?></td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -151,9 +172,6 @@ require_once('../controller.php');
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.js"></script>
