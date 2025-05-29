@@ -5,7 +5,7 @@
 # This app is so simple I'm not worried about the _correct_ design here.  But
 # this file does all the work and creates all the variables we use below.
 
-require_once('../controller.php');  
+require_once('../controller.php');
 ?>
 
 <head>
@@ -26,6 +26,7 @@ require_once('../controller.php');
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -140,7 +141,7 @@ require_once('../controller.php');
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach($log as $row) { ?>
+                                            <?php foreach ($log as $row) { ?>
                                                 <tr>
                                                     <td><?= $row['id'] ?></td>
                                                     <td><?= $row['callsign'] ?></td>
@@ -168,6 +169,13 @@ require_once('../controller.php');
 
     </div>
     <!-- End of Page Wrapper -->
+
+    <!-- Countdown Timer -->
+    <div id="countdown">
+        <div>
+            Next update in <span id="seconds">60 seconds</span>.
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
